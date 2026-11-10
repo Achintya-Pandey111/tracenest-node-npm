@@ -1,0 +1,7 @@
+{
+  "name": "tracenest-node",
+  "version": "0.1.0",
+  "description": "Lightweight Node.js async execution tracing, nested operation monitoring, and performance analysis library",
+  "main": "src/index.js",
+  "license": "MIT"
+}
