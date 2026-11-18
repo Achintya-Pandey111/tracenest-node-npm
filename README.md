@@ -11,3 +11,10 @@ TraceNest provides async execution context tracking and hierarchical performance
 const TraceNest = require('tracenest-node');
 TraceNest.start();
 ```
+
+## Express Middleware
+
+```javascript
+const { expressMiddleware } = require('tracenest-node');
+app.use(expressMiddleware());
+```
