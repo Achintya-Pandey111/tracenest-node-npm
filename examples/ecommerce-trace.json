@@ -1,0 +1,515 @@
+{
+  "tracenestVersion": "1.0.0",
+  "traceId": "trc_27f2f9f5c760",
+  "name": "ECommerceCheckout",
+  "timestamp": "2026-11-22T12:19:19.380Z",
+  "summary": {
+    "totalOperations": 8,
+    "successfulOperations": 8,
+    "failedOperations": 0,
+    "runningOperations": 0,
+    "successRate": 100,
+    "totalEvents": 20,
+    "totalExecutionTimeMs": 156,
+    "averageDurationMs": 54.761,
+    "minDurationMs": 11.142,
+    "maxDurationMs": 155.434,
+    "percentiles": {
+      "p50": 26.163,
+      "p90": 155.434,
+      "p95": 155.434,
+      "p99": 155.434
+    },
+    "statusCounts": {
+      "SUCCESS": 8,
+      "ERROR": 0,
+      "RUNNING": 0
+    },
+    "nameCounts": {
+      "Process Order": 1,
+      "Validate User Session": 1,
+      "Inventory Verification": 1,
+      "Query Warehouse DB": 1,
+      "Reserve Items": 1,
+      "Charge Payment": 1,
+      "Contact Payment Gateway (Stripe)": 1,
+      "Send Confirmation Email": 1
+    }
+  },
+  "slowOperations": [
+    {
+      "id": "op_885c4d33ff6d",
+      "name": "Process Order",
+      "durationMs": 155.434,
+      "thresholdMs": 60,
+      "status": "SUCCESS",
+      "startTime": 1795349959219,
+      "endTime": 1795349959375,
+      "parentId": null,
+      "depth": 0
+    },
+    {
+      "id": "op_2381089766cf",
+      "name": "Charge Payment",
+      "durationMs": 81.185,
+      "thresholdMs": 60,
+      "status": "SUCCESS",
+      "startTime": 1795349959283,
+      "endTime": 1795349959364,
+      "parentId": "op_885c4d33ff6d",
+      "depth": 1
+    },
+    {
+      "id": "op_093de2796607",
+      "name": "Contact Payment Gateway (Stripe)",
+      "durationMs": 81.097,
+      "thresholdMs": 60,
+      "status": "SUCCESS",
+      "startTime": 1795349959283,
+      "endTime": 1795349959364,
+      "parentId": "op_2381089766cf",
+      "depth": 2
+    }
+  ],
+  "tree": [
+    {
+      "id": "op_885c4d33ff6d",
+      "traceId": "trc_27f2f9f5c760",
+      "parentId": null,
+      "name": "Process Order",
+      "depth": 0,
+      "startTime": 1795349959219,
+      "endTime": 1795349959375,
+      "durationMs": 155.434,
+      "status": "SUCCESS",
+      "children": [
+        {
+          "id": "op_503c931c7ec1",
+          "traceId": "trc_27f2f9f5c760",
+          "parentId": "op_885c4d33ff6d",
+          "name": "Validate User Session",
+          "depth": 1,
+          "startTime": 1795349959220,
+          "endTime": 1795349959236,
+          "durationMs": 16.462,
+          "status": "SUCCESS",
+          "children": []
+        },
+        {
+          "id": "op_1936373eb589",
+          "traceId": "trc_27f2f9f5c760",
+          "parentId": "op_885c4d33ff6d",
+          "name": "Inventory Verification",
+          "depth": 1,
+          "startTime": 1795349959236,
+          "endTime": 1795349959283,
+          "durationMs": 46.449,
+          "status": "SUCCESS",
+          "children": [
+            {
+              "id": "op_043b65f43203",
+              "traceId": "trc_27f2f9f5c760",
+              "parentId": "op_1936373eb589",
+              "name": "Query Warehouse DB",
+              "depth": 2,
+              "startTime": 1795349959236,
+              "endTime": 1795349959262,
+              "durationMs": 26.163,
+              "status": "SUCCESS",
+              "children": []
+            },
+            {
+              "id": "op_6f4a1c834578",
+              "traceId": "trc_27f2f9f5c760",
+              "parentId": "op_1936373eb589",
+              "name": "Reserve Items",
+              "depth": 2,
+              "startTime": 1795349959262,
+              "endTime": 1795349959282,
+              "durationMs": 20.157,
+              "status": "SUCCESS",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "op_2381089766cf",
+          "traceId": "trc_27f2f9f5c760",
+          "parentId": "op_885c4d33ff6d",
+          "name": "Charge Payment",
+          "depth": 1,
+          "startTime": 1795349959283,
+          "endTime": 1795349959364,
+          "durationMs": 81.185,
+          "status": "SUCCESS",
+          "children": [
+            {
+              "id": "op_093de2796607",
+              "traceId": "trc_27f2f9f5c760",
+              "parentId": "op_2381089766cf",
+              "name": "Contact Payment Gateway (Stripe)",
+              "depth": 2,
+              "startTime": 1795349959283,
+              "endTime": 1795349959364,
+              "durationMs": 81.097,
+              "status": "SUCCESS",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "op_82fee0afcfba",
+          "traceId": "trc_27f2f9f5c760",
+          "parentId": "op_885c4d33ff6d",
+          "name": "Send Confirmation Email",
+          "depth": 1,
+          "startTime": 1795349959364,
+          "endTime": 1795349959375,
+          "durationMs": 11.142,
+          "status": "SUCCESS",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "op_885c4d33ff6d",
+      "traceId": "trc_27f2f9f5c760",
+      "parentId": null,
+      "name": "Process Order",
+      "depth": 0,
+      "startTime": 1795349959219,
+      "endTime": 1795349959375,
+      "durationMs": 155.434,
+      "status": "SUCCESS",
+      "children": [
+        "op_503c931c7ec1",
+        "op_1936373eb589",
+        "op_2381089766cf",
+        "op_82fee0afcfba"
+      ]
+    },
+    {
+      "id": "op_503c931c7ec1",
+      "traceId": "trc_27f2f9f5c760",
+      "parentId": "op_885c4d33ff6d",
+      "name": "Validate User Session",
+      "depth": 1,
+      "startTime": 1795349959220,
+      "endTime": 1795349959236,
+      "durationMs": 16.462,
+      "status": "SUCCESS",
+      "children": []
+    },
+    {
+      "id": "op_1936373eb589",
+      "traceId": "trc_27f2f9f5c760",
+      "parentId": "op_885c4d33ff6d",
+      "name": "Inventory Verification",
+      "depth": 1,
+      "startTime": 1795349959236,
+      "endTime": 1795349959283,
+      "durationMs": 46.449,
+      "status": "SUCCESS",
+      "children": [
+        "op_043b65f43203",
+        "op_6f4a1c834578"
+      ]
+    },
+    {
+      "id": "op_043b65f43203",
+      "traceId": "trc_27f2f9f5c760",
+      "parentId": "op_1936373eb589",
+      "name": "Query Warehouse DB",
+      "depth": 2,
+      "startTime": 1795349959236,
+      "endTime": 1795349959262,
+      "durationMs": 26.163,
+      "status": "SUCCESS",
+      "children": []
+    },
+    {
+      "id": "op_6f4a1c834578",
+      "traceId": "trc_27f2f9f5c760",
+      "parentId": "op_1936373eb589",
+      "name": "Reserve Items",
+      "depth": 2,
+      "startTime": 1795349959262,
+      "endTime": 1795349959282,
+      "durationMs": 20.157,
+      "status": "SUCCESS",
+      "children": []
+    },
+    {
+      "id": "op_2381089766cf",
+      "traceId": "trc_27f2f9f5c760",
+      "parentId": "op_885c4d33ff6d",
+      "name": "Charge Payment",
+      "depth": 1,
+      "startTime": 1795349959283,
+      "endTime": 1795349959364,
+      "durationMs": 81.185,
+      "status": "SUCCESS",
+      "children": [
+        "op_093de2796607"
+      ]
+    },
+    {
+      "id": "op_093de2796607",
+      "traceId": "trc_27f2f9f5c760",
+      "parentId": "op_2381089766cf",
+      "name": "Contact Payment Gateway (Stripe)",
+      "depth": 2,
+      "startTime": 1795349959283,
+      "endTime": 1795349959364,
+      "durationMs": 81.097,
+      "status": "SUCCESS",
+      "children": []
+    },
+    {
+      "id": "op_82fee0afcfba",
+      "traceId": "trc_27f2f9f5c760",
+      "parentId": "op_885c4d33ff6d",
+      "name": "Send Confirmation Email",
+      "depth": 1,
+      "startTime": 1795349959364,
+      "endTime": 1795349959375,
+      "durationMs": 11.142,
+      "status": "SUCCESS",
+      "children": []
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_6516c75f2959",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": null,
+      "parentOperationId": null,
+      "type": "START",
+      "name": "Trace session started: ECommerceCheckout",
+      "timestamp": 1795349959219,
+      "durationMs": null,
+      "depth": 0
+    },
+    {
+      "id": "evt_37a71036a59d",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_885c4d33ff6d",
+      "parentOperationId": null,
+      "type": "CALL",
+      "name": "Process Order",
+      "timestamp": 1795349959220,
+      "durationMs": null,
+      "depth": 0
+    },
+    {
+      "id": "evt_21cbda3ed238",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_885c4d33ff6d",
+      "parentOperationId": "op_885c4d33ff6d",
+      "type": "TRACK",
+      "name": "Order received",
+      "timestamp": 1795349959220,
+      "durationMs": null,
+      "depth": 1,
+      "metadata": {
+        "orderId": "ord_998822"
+      }
+    },
+    {
+      "id": "evt_64903675ce86",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_503c931c7ec1",
+      "parentOperationId": "op_885c4d33ff6d",
+      "type": "CALL",
+      "name": "Validate User Session",
+      "timestamp": 1795349959220,
+      "durationMs": null,
+      "depth": 1
+    },
+    {
+      "id": "evt_b116cc305118",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_503c931c7ec1",
+      "parentOperationId": "op_503c931c7ec1",
+      "type": "TRACK",
+      "name": "Session valid",
+      "timestamp": 1795349959236,
+      "durationMs": null,
+      "depth": 2
+    },
+    {
+      "id": "evt_164fc827bb07",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_503c931c7ec1",
+      "parentOperationId": "op_885c4d33ff6d",
+      "type": "SUCCESS",
+      "name": "Validate User Session",
+      "timestamp": 1795349959236,
+      "durationMs": 16.462,
+      "depth": 1
+    },
+    {
+      "id": "evt_f7993125de60",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_1936373eb589",
+      "parentOperationId": "op_885c4d33ff6d",
+      "type": "CALL",
+      "name": "Inventory Verification",
+      "timestamp": 1795349959236,
+      "durationMs": null,
+      "depth": 1
+    },
+    {
+      "id": "evt_17c7ece7b4ab",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_043b65f43203",
+      "parentOperationId": "op_1936373eb589",
+      "type": "CALL",
+      "name": "Query Warehouse DB",
+      "timestamp": 1795349959236,
+      "durationMs": null,
+      "depth": 2
+    },
+    {
+      "id": "evt_0a1c220cfa5c",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_043b65f43203",
+      "parentOperationId": "op_1936373eb589",
+      "type": "SUCCESS",
+      "name": "Query Warehouse DB",
+      "timestamp": 1795349959262,
+      "durationMs": 26.163,
+      "depth": 2
+    },
+    {
+      "id": "evt_f1fce5cdfd16",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_6f4a1c834578",
+      "parentOperationId": "op_1936373eb589",
+      "type": "CALL",
+      "name": "Reserve Items",
+      "timestamp": 1795349959262,
+      "durationMs": null,
+      "depth": 2
+    },
+    {
+      "id": "evt_fa0eaed71359",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_6f4a1c834578",
+      "parentOperationId": "op_1936373eb589",
+      "type": "SUCCESS",
+      "name": "Reserve Items",
+      "timestamp": 1795349959282,
+      "durationMs": 20.157,
+      "depth": 2
+    },
+    {
+      "id": "evt_a4427cbfab4a",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_1936373eb589",
+      "parentOperationId": "op_885c4d33ff6d",
+      "type": "SUCCESS",
+      "name": "Inventory Verification",
+      "timestamp": 1795349959283,
+      "durationMs": 46.449,
+      "depth": 1
+    },
+    {
+      "id": "evt_d4f133935362",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_2381089766cf",
+      "parentOperationId": "op_885c4d33ff6d",
+      "type": "CALL",
+      "name": "Charge Payment",
+      "timestamp": 1795349959283,
+      "durationMs": null,
+      "depth": 1
+    },
+    {
+      "id": "evt_feca84dd04e9",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_093de2796607",
+      "parentOperationId": "op_2381089766cf",
+      "type": "CALL",
+      "name": "Contact Payment Gateway (Stripe)",
+      "timestamp": 1795349959283,
+      "durationMs": null,
+      "depth": 2
+    },
+    {
+      "id": "evt_4b83a1cc181b",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_093de2796607",
+      "parentOperationId": "op_2381089766cf",
+      "type": "SUCCESS",
+      "name": "Contact Payment Gateway (Stripe)",
+      "timestamp": 1795349959364,
+      "durationMs": 81.097,
+      "depth": 2
+    },
+    {
+      "id": "evt_2c3604624e79",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_2381089766cf",
+      "parentOperationId": "op_2381089766cf",
+      "type": "TRACK",
+      "name": "Payment authorized",
+      "timestamp": 1795349959364,
+      "durationMs": null,
+      "depth": 2
+    },
+    {
+      "id": "evt_eacdb35ee7b5",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_2381089766cf",
+      "parentOperationId": "op_885c4d33ff6d",
+      "type": "SUCCESS",
+      "name": "Charge Payment",
+      "timestamp": 1795349959364,
+      "durationMs": 81.185,
+      "depth": 1
+    },
+    {
+      "id": "evt_a8d36bc056a6",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_82fee0afcfba",
+      "parentOperationId": "op_885c4d33ff6d",
+      "type": "CALL",
+      "name": "Send Confirmation Email",
+      "timestamp": 1795349959364,
+      "durationMs": null,
+      "depth": 1
+    },
+    {
+      "id": "evt_29cde1273b81",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_82fee0afcfba",
+      "parentOperationId": "op_885c4d33ff6d",
+      "type": "SUCCESS",
+      "name": "Send Confirmation Email",
+      "timestamp": 1795349959375,
+      "durationMs": 11.142,
+      "depth": 1
+    },
+    {
+      "id": "evt_65b7fc62e62b",
+      "traceId": "trc_27f2f9f5c760",
+      "operationId": "op_885c4d33ff6d",
+      "parentOperationId": null,
+      "type": "SUCCESS",
+      "name": "Process Order",
+      "timestamp": 1795349959375,
+      "durationMs": 155.434,
+      "depth": 0
+    }
+  ],
+  "errors": [],
+  "storeStats": {
+    "eventsCount": 20,
+    "operationsCount": 8,
+    "totalEventsRecorded": 20,
+    "droppedEventsCount": 0
+  }
+}
