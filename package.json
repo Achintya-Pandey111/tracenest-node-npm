@@ -5,7 +5,11 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "test": "node --test tests/*.test.js"
+    "test": "node --test tests/*.test.js",
+    "example:basic": "node examples/basic.js",
+    "example:nested": "node examples/nested.js",
+    "example:express": "node examples/express.js",
+    "example:errors": "node examples/error-handling.js"
   },
   "bin": {
     "tracenest": "bin/tracenest.js"
