@@ -27,5 +27,16 @@
     "timeline",
     "apm"
   ],
-  "author": "Achintya Pandey"
+  "author": "Achintya Pandey",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "peerDependencies": {
+    "express": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    }
+  }
 }
