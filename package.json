@@ -13,5 +13,19 @@
   },
   "bin": {
     "tracenest": "bin/tracenest.js"
-  }
+  },
+  "keywords": [
+    "tracing",
+    "async-hooks",
+    "async-local-storage",
+    "performance",
+    "profiling",
+    "execution-flow",
+    "observability",
+    "nested-tracing",
+    "express-middleware",
+    "timeline",
+    "apm"
+  ],
+  "author": "Achintya Pandey"
 }
