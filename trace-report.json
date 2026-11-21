@@ -1,0 +1,239 @@
+{
+  "tracenestVersion": "1.0.0",
+  "traceId": "trc_56ff9136570b4c4f_000001",
+  "name": "default",
+  "timestamp": "2026-11-22T12:30:34.471Z",
+  "summary": {
+    "totalOperations": 3,
+    "successfulOperations": 3,
+    "failedOperations": 0,
+    "runningOperations": 0,
+    "successRate": 100,
+    "totalEvents": 7,
+    "totalExecutionTimeMs": 404,
+    "wallClockTimeMs": 404,
+    "sumOperationDurationMs": 806.573,
+    "averageDurationMs": 268.858,
+    "minDurationMs": 101.276,
+    "maxDurationMs": 403.459,
+    "percentiles": {
+      "p50": 301.838,
+      "p90": 383.135,
+      "p95": 393.297,
+      "p99": 401.427
+    },
+    "statusCounts": {
+      "SUCCESS": 3,
+      "ERROR": 0,
+      "RUNNING": 0
+    },
+    "nameCounts": {
+      "Main operation": 1,
+      "Database query": 1,
+      "Processing data": 1
+    }
+  },
+  "slowOperations": [
+    {
+      "id": "op_eaf47417bc8b41b0_000003",
+      "name": "Main operation",
+      "durationMs": 403.459,
+      "thresholdMs": 100,
+      "status": "SUCCESS",
+      "startTime": 1795350634065,
+      "endTime": 1795350634469,
+      "parentId": null,
+      "depth": 0
+    },
+    {
+      "id": "op_bfd3b41575ca4ab0_000005",
+      "name": "Database query",
+      "durationMs": 301.838,
+      "thresholdMs": 100,
+      "status": "SUCCESS",
+      "startTime": 1795350634065,
+      "endTime": 1795350634367,
+      "parentId": "op_eaf47417bc8b41b0_000003",
+      "depth": 1
+    },
+    {
+      "id": "op_1ac4537803754f59_000008",
+      "name": "Processing data",
+      "durationMs": 101.276,
+      "thresholdMs": 100,
+      "status": "SUCCESS",
+      "startTime": 1795350634367,
+      "endTime": 1795350634468,
+      "parentId": "op_eaf47417bc8b41b0_000003",
+      "depth": 1
+    }
+  ],
+  "tree": [
+    {
+      "id": "op_eaf47417bc8b41b0_000003",
+      "traceId": "trc_56ff9136570b4c4f_000001",
+      "parentId": null,
+      "name": "Main operation",
+      "depth": 0,
+      "startTime": 1795350634065,
+      "endTime": 1795350634469,
+      "durationMs": 403.459,
+      "status": "SUCCESS",
+      "children": [
+        {
+          "id": "op_bfd3b41575ca4ab0_000005",
+          "traceId": "trc_56ff9136570b4c4f_000001",
+          "parentId": "op_eaf47417bc8b41b0_000003",
+          "name": "Database query",
+          "depth": 1,
+          "startTime": 1795350634065,
+          "endTime": 1795350634367,
+          "durationMs": 301.838,
+          "status": "SUCCESS",
+          "children": []
+        },
+        {
+          "id": "op_1ac4537803754f59_000008",
+          "traceId": "trc_56ff9136570b4c4f_000001",
+          "parentId": "op_eaf47417bc8b41b0_000003",
+          "name": "Processing data",
+          "depth": 1,
+          "startTime": 1795350634367,
+          "endTime": 1795350634468,
+          "durationMs": 101.276,
+          "status": "SUCCESS",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "op_eaf47417bc8b41b0_000003",
+      "traceId": "trc_56ff9136570b4c4f_000001",
+      "parentId": null,
+      "name": "Main operation",
+      "depth": 0,
+      "startTime": 1795350634065,
+      "endTime": 1795350634469,
+      "durationMs": 403.459,
+      "status": "SUCCESS",
+      "children": [
+        "op_bfd3b41575ca4ab0_000005",
+        "op_1ac4537803754f59_000008"
+      ]
+    },
+    {
+      "id": "op_bfd3b41575ca4ab0_000005",
+      "traceId": "trc_56ff9136570b4c4f_000001",
+      "parentId": "op_eaf47417bc8b41b0_000003",
+      "name": "Database query",
+      "depth": 1,
+      "startTime": 1795350634065,
+      "endTime": 1795350634367,
+      "durationMs": 301.838,
+      "status": "SUCCESS",
+      "children": []
+    },
+    {
+      "id": "op_1ac4537803754f59_000008",
+      "traceId": "trc_56ff9136570b4c4f_000001",
+      "parentId": "op_eaf47417bc8b41b0_000003",
+      "name": "Processing data",
+      "depth": 1,
+      "startTime": 1795350634367,
+      "endTime": 1795350634468,
+      "durationMs": 101.276,
+      "status": "SUCCESS",
+      "children": []
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_f0d8c16c72444390_000002",
+      "traceId": "trc_56ff9136570b4c4f_000001",
+      "operationId": null,
+      "parentOperationId": null,
+      "type": "START",
+      "name": "Trace session started: default",
+      "timestamp": 1795350634065,
+      "durationMs": null,
+      "depth": 0
+    },
+    {
+      "id": "evt_b44ed870b349469c_000004",
+      "traceId": "trc_56ff9136570b4c4f_000001",
+      "operationId": "op_eaf47417bc8b41b0_000003",
+      "parentOperationId": null,
+      "type": "CALL",
+      "name": "Main operation",
+      "timestamp": 1795350634065,
+      "durationMs": null,
+      "depth": 0
+    },
+    {
+      "id": "evt_97e29e7d19d0424b_000006",
+      "traceId": "trc_56ff9136570b4c4f_000001",
+      "operationId": "op_bfd3b41575ca4ab0_000005",
+      "parentOperationId": "op_eaf47417bc8b41b0_000003",
+      "type": "CALL",
+      "name": "Database query",
+      "timestamp": 1795350634065,
+      "durationMs": null,
+      "depth": 1
+    },
+    {
+      "id": "evt_f4cd229af44143a6_000007",
+      "traceId": "trc_56ff9136570b4c4f_000001",
+      "operationId": "op_bfd3b41575ca4ab0_000005",
+      "parentOperationId": "op_eaf47417bc8b41b0_000003",
+      "type": "SUCCESS",
+      "name": "Database query",
+      "timestamp": 1795350634367,
+      "durationMs": 301.838,
+      "depth": 1
+    },
+    {
+      "id": "evt_5a244993e9954f81_000009",
+      "traceId": "trc_56ff9136570b4c4f_000001",
+      "operationId": "op_1ac4537803754f59_000008",
+      "parentOperationId": "op_eaf47417bc8b41b0_000003",
+      "type": "CALL",
+      "name": "Processing data",
+      "timestamp": 1795350634367,
+      "durationMs": null,
+      "depth": 1
+    },
+    {
+      "id": "evt_c03191d3cb824a56_00000a",
+      "traceId": "trc_56ff9136570b4c4f_000001",
+      "operationId": "op_1ac4537803754f59_000008",
+      "parentOperationId": "op_eaf47417bc8b41b0_000003",
+      "type": "SUCCESS",
+      "name": "Processing data",
+      "timestamp": 1795350634468,
+      "durationMs": 101.276,
+      "depth": 1
+    },
+    {
+      "id": "evt_d7d382cba8634a33_00000b",
+      "traceId": "trc_56ff9136570b4c4f_000001",
+      "operationId": "op_eaf47417bc8b41b0_000003",
+      "parentOperationId": null,
+      "type": "SUCCESS",
+      "name": "Main operation",
+      "timestamp": 1795350634469,
+      "durationMs": 403.459,
+      "depth": 0
+    }
+  ],
+  "errors": [],
+  "storeStats": {
+    "eventsCount": 7,
+    "operationsCount": 3,
+    "totalEventsRecorded": 7,
+    "droppedEventsCount": 0,
+    "totalOperationsRecorded": 3,
+    "droppedOperationsCount": 0
+  }
+}
